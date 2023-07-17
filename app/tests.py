@@ -140,7 +140,7 @@ class TestAPIs(TestCase):
             sys.stderr.write("Mining %d sec for %s"%(n,acc['name']) + '\n')
             self.web3.geth.miner.set_etherbase(acc['address'])
             self.web3.geth.miner.start(4)
-            time.sleep(15)
+            time.sleep(n)
             self.web3.geth.miner.stop()
         if self.web3.eth.mining:
             self.web3.geth.miner.stop()
