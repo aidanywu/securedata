@@ -11,6 +11,9 @@ from web3.exceptions import ContractLogicError
 
 print('i am here')
 
+"""
+    Run using: python manage.py test app.tests.TestAPIs.runTest
+"""
 class TestAPIs(TestCase):
     def setUp(self):
         sys.stderr.write("SetUp--------------------"+'\n')
@@ -32,6 +35,9 @@ class TestAPIs(TestCase):
         self.accs = [self.admin, self.nonadmin]
         self.users = ['person1', 'person2']
         self.client = Client()
+        """
+            Run this function only
+        """
     def runTest(self):
         sys.stderr.write("isReady------------------"+'\n')
         self.isReady()
